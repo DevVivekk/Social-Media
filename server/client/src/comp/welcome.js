@@ -40,7 +40,15 @@ useEffect(()=>{
       people.map((item)=>{
         return(
           <>
-            <img src= {`/${item.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
+         {
+          item.userImage.map(val=>{
+            return(
+              <>
+              <img src= {`/${val.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
+              </>
+            )
+          })
+         }
           </>
         )
       })
