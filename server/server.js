@@ -12,7 +12,7 @@ const jwt = require("jsonwebtoken")
 const cors = require("cors");
 const socialmodel = require('./db')
 const bodyParser = require("body-parser")
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 app.use(bodyParser.json());
 const corsOptions = {
     origin:true,

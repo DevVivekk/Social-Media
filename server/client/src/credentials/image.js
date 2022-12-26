@@ -33,7 +33,7 @@ const Image = () => {
 
 useEffect(()=>{
   if(person.length===1){
-    navigate('/home')
+    navigate('/home',{replace:true})
   }
 },[person])
 
@@ -57,7 +57,7 @@ useEffect(()=>{
     const res= await axios.post('/registerimage',formData,config,)
     if(res.status===201){
       window.alert('success')
-      navigate('/home')
+      navigate('/home',{replace:true})
     }else{
       window.alert("failed request")
     }
