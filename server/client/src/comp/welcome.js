@@ -52,7 +52,7 @@ useEffect(()=>{
     <div style={{"display":"flex","flexDirection":"row","justifyContent":"space-evenly","flexWrap":"wrap","overflow":"auto","height":"auto","marginTop":"5rem"}}>
     <div style={{"width":"40rem","height":"20rem","marginLeft":"4rem","marginTop":"5rem"}}>
       <button className='home-btn' onClick={settext}>Textual Updates</button><br/><br/>
-      <button onClick={setphoto} className='home-btn'>Photgraphic Updates</button><br/><br/>
+      <button onClick={setphoto} className='home-btn'>Photographic Updates</button><br/><br/>
       <button onClick={setmemee} className='home-btn'>Memes</button><br/><br/>
     </div>
    {
