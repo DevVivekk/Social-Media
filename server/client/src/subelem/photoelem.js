@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react'
+import React, {   useState } from 'react'
 import Photos from '../updates/photos'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
