@@ -40,7 +40,7 @@ useEffect(()=>{
       people.map((item)=>{
         return(
           <>
-            <img src= {`http://localhost:4000/uploads/${item.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
+            <img src= {`/${item.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
           </>
         )
       })
