@@ -34,7 +34,7 @@ export const Center = () => {
     })
     const data = await res.json();
     setPerson(data.fullname);
-    setPeople(data);
+    setPeople(data.userImage);
   }
   catch(e){
 
