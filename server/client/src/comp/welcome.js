@@ -38,15 +38,21 @@ useEffect(()=>{
       <h1 style={{"marginTop":"2.5rem","fontSize":"2.5rem","fontFamily":"sans-serif"}}>Hi, {person}</h1>
       {
       social.map((item)=>{
-      
         return(
           <>
          {
           item.userImage.map(val=>{
-    
             return(
               <>
-              <img src= {`/${val.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
+             {
+              val.image.map(va=>{
+                return(
+                  <>
+                  <img src= {`/uploads/${va}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
+                  </>
+                )
+              })
+             }
               </>
             )
           })
