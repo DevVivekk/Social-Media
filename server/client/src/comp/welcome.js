@@ -37,26 +37,10 @@ useEffect(()=>{
     <div style={{"display":"flex","flexDirection":"row"}}>
       <h1 style={{"marginTop":"2.5rem","fontSize":"2.5rem","fontFamily":"sans-serif"}}>Hi, {person}</h1>
       {
-      social.map((item)=>{
+      people.map((item)=>{
         return(
           <>
-         {
-          item.userImage.map(val=>{
-            return(
-              <>
-             {
-              val.image.map(va=>{
-                return(
-                  <>
-                  <img src= {`/uploads/${va}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
-                  </>
-                )
-              })
-             }
-              </>
-            )
-          })
-         }
+            <img src= {`/uploads/${item.image}`}  style={{"width":"6rem","height":"6rem","borderRadius":"50%","marginTop":"1rem","marginLeft":"4rem","marginRight":"4rem"}} alt='img' />
           </>
         )
       })
