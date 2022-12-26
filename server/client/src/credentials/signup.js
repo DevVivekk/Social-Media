@@ -13,6 +13,9 @@ const Signup = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     const {fullname,email,mobile,gender,password,cpassword} = user;
+    if(password!==cpassword){
+      toast.warn('Password mismatch error!')
+    }else{
     const res = await fetch('/register',{
       method:"POST",
       headers:{
@@ -26,7 +29,7 @@ const Signup = () => {
       navigate('/login')
     }else{
       toast.error("Recheck your data and email & mobile are unique!")
-    }
+    }}
   }
   return (
     <div className='signup'>
