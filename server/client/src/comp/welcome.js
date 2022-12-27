@@ -1,12 +1,12 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Memeele from '../subelem/memeel';
 import Photoelem from '../subelem/photoelem';
 import Textelem from '../subelem/textelem';
 const Welcome = ({people,person,social,callSocial,getuser,desp}) => {
  
-useLayoutEffect(()=>{
+useEffect(()=>{
   getuser();
-},[getuser])
+},[])
 
   const [texthide,setTexthide] = useState(true)
   const [photgraph,setPhotograph] = useState(false)

@@ -15,7 +15,6 @@ import Logoutt from './credentials/logout'
 import Welcome from './comp/welcome'
 import HomeHeader from './components/homeheader'
 export const Center = () => {
-
   const [person,setPerson] = useState("");
   const [people,setPeople] = useState([]);
   const [social, setSocial] = useState([]);
@@ -37,11 +36,8 @@ export const Center = () => {
     setPeople(data.userImage);
   }
   catch(e){
-
   }}
-  useEffect(()=>{
-    getuserapi();
-  },[])
+
 
 
   //calling social data

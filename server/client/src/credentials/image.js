@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import User from '../media/user.jpg'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom'
 const Image = () => {
   const navigate = useNavigate()
@@ -33,6 +35,7 @@ const Image = () => {
 
 useEffect(()=>{
   if(person.length===1){
+    toast.success("Success, please refresh the page!")
     navigate('/home',{replace:true})
     navigate('/home')
   }
@@ -57,9 +60,8 @@ useEffect(()=>{
     }
     const res= await axios.post('/registerimage',formData,config,)
     if(res.status===201){
-      window.alert('success')
+      toast.success("Success, please refresh the page!")
       navigate('/home',{replace:true})
-      navigate('/home')
     }else{
       window.alert("failed request")
     }
@@ -88,6 +90,7 @@ useEffect(()=>{
         )
       })
     } */}
+    <ToastContainer  position='top-center' />
     </div>
   )
 }
