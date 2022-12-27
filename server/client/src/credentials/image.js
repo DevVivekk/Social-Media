@@ -34,6 +34,7 @@ const Image = () => {
 useEffect(()=>{
   if(person.length===1){
     navigate('/home',{replace:true})
+    navigate('/home')
   }
 },[person])
 
@@ -58,6 +59,7 @@ useEffect(()=>{
     if(res.status===201){
       window.alert('success')
       navigate('/home',{replace:true})
+      navigate('/home')
     }else{
       window.alert("failed request")
     }

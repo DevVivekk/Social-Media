@@ -6,7 +6,7 @@ const Welcome = ({people,person,social,callSocial,getuser,desp}) => {
  
 useLayoutEffect(()=>{
   getuser();
-},[])
+},[getuser])
 
   const [texthide,setTexthide] = useState(true)
   const [photgraph,setPhotograph] = useState(false)
