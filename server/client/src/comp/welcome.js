@@ -60,7 +60,7 @@ useEffect(()=>{
     :null
    }
    {
-    photgraph?<Photoelem social={social} desp={desp} callSocial={callSocial} />
+    photgraph?<Photoelem social={social} desp={desp} callsocial={callSocial}/>
     :null
    }
 

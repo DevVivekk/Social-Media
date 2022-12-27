@@ -53,7 +53,7 @@ const Memeele = ({social,callsocial}) => {
                 ite.memes.concat().reverse().map(item=>{
                     return(
                         <>
-                      <Memes img={item.meme} social={social} />
+                      <Memes img={item} social={social} />
                         </>
                     )
                 })

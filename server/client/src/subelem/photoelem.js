@@ -1,4 +1,4 @@
-import React, {   useState } from 'react'
+import React, {   useEffect, useState } from 'react'
 import Photos from '../updates/photos'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -35,13 +35,13 @@ const Photoelem = ({social,callsocial}) => {
     const res = await axios.post("/photo", formData, config);
 
     if (res.status === 201) {
-        toast.success("success. Please refresh the page!")
+        toast.success("success")
     }else if(res.status===401){
         toast.warn("failed to post")
     }else{
         toast.warn("please recheck!")
     }
-    callsocial()
+    callsocial();
   }
 
 
@@ -57,7 +57,7 @@ const Photoelem = ({social,callsocial}) => {
                 ite.photos.concat().reverse().map(item=>{
                     return(
                         <>
-                      <Photos img={item.photo} social={social} />
+                      <Photos img={item} social={social} />
                         </>
                     )
                 })

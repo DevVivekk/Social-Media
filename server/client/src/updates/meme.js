@@ -2,7 +2,7 @@ import React from 'react'
 const Memes = ({img,social}) => {
   return (
     <div className='photosele' style={{"width":"35rem","height":"38rem","borderRadius":"4rem","marginBottom":"4rem"}}>
-    <img src= {`/uploads/${img}`} style={{"width":"35rem","height":"38rem","borderRadius":"4rem"}} alt='img' />
+    <img src= {`/uploads/${img.meme}`} style={{"width":"35rem","height":"38rem","borderRadius":"4rem"}} alt='img' />
     {
       social.map(val=>{
         return(
