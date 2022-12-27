@@ -46,7 +46,7 @@ const Memeele = ({social,callsocial}) => {
     <div className='photoelem' style={{"width":"60rem","height":"90rem","flexDirection":"column","display":"flex","alignItems":"center","overflow":"auto","justifyContent":"space-around"}}>
     <div style={{"overflow":"auto","width":"60rem","paddingLeft":"10rem"}}>
     {
-        social.concat().reverse().map(ite=>{
+        social.map(ite=>{
             return(
               <>
             {
